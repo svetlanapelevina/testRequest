@@ -1,15 +1,8 @@
 let lexOrigin = "https://vslightningtest-dev-ed.lightning.force.com";
 
 function send() {
-	let message = document.getElementById("message").value;
-	alert(message);
-    parent.postMessage(message, lexOrigin);
-}
-
-function sendMessage(message) {
-	let message = document.getElementById("message").value;
-	alert(message);
-    parent.postMessage(message, lexOrigin);
+	let message1 = document.getElementById("message").value;
+    parent.postMessage(message1, lexOrigin);
 }
 
 
