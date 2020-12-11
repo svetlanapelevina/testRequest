@@ -5,14 +5,9 @@ function send() {
     parent.postMessage(message1, lexOrigin);
 }
 
-
-const request = new Request('https://www.mozilla.org/favicon.ico');
-
-const URL = request.url;
-const method = request.method;
-const credentials = request.credentials;
-
-function fetchRequest() {
-	fetch(request)
-	  .then(response => alert(response);
+const getData = () => {
+	fetch('https://reqres.in/api/users?page=2').then(response => {
+		console.log(response);
+		alert(response);
+	});	
 }
