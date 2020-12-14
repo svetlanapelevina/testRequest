@@ -14,10 +14,9 @@ const getData = () => {
 
 const modifyText = (event) => {
 	console.log('received');
-	//document.getElementById("receive").value = event.data + ' ' + event.lexOrigin;
 	alert(event)
 //    alert(event.data);
 //    alert(event.lexOrigin);	
 }
 
-window.addEventListener("message", modifyText('xtnsh'));
+window.addEventListener("message", modifyText());
