@@ -19,4 +19,4 @@ const modifyText = (event) => {
 //    alert(event.lexOrigin);	
 }
 
-window.addEventListener("message", modifyText());
+window.addEventListener("message", modifyText);
