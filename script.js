@@ -12,11 +12,11 @@ const getData = () => {
 	});	
 }
 
-const modifyText = (event) => {
+function modifyText(event) {
 	console.log('received');
 	alert(event)
 //    alert(event.data);
 //    alert(event.lexOrigin);	
 }
 
-window.addEventListener("message", modifyText);
+window.addEventListener("message", modifyText.bind(this));
