@@ -13,11 +13,9 @@ const getData = () => {
 	});	
 }
 
-function modifyText(event) {
-	console.log('received');
-	console.log(event)
-    alert(event.data);
-    alert(event.lexOrigin);	
+function modifyText(message) {
+	alert('received ' + message);
+	lexOrigin = message;
 }
 
 window.addEventListener("message", modifyText.bind(this));
