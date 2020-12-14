@@ -13,7 +13,8 @@ const getData = () => {
 }
 
 const modifyText = (event) => {
-	document.getElementById("receive").value = event.data + ' ' + event.lexOrigin;
+	console.log('received');
+	//document.getElementById("receive").value = event.data + ' ' + event.lexOrigin;
 	alert(event)
 //    alert(event.data);
 //    alert(event.lexOrigin);	
