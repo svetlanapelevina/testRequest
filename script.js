@@ -14,9 +14,9 @@ const getData = () => {
 
 function modifyText(event) {
 	console.log('received');
-	alert(event)
-//    alert(event.data);
-//    alert(event.lexOrigin);	
+	console.log(event)
+    alert(event.data);
+    alert(event.lexOrigin);	
 }
 
 window.addEventListener("message", modifyText.bind(this));
