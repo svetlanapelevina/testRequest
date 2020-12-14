@@ -1,6 +1,7 @@
-let lexOrigin = 'https://vsdev-developer-edition.na88.force.com/Napili/'
+let lexOrigin;
 
 const send = () => {
+	console.log(lexOrigin);
 	let message1 = document.getElementById("message").value;
     parent.postMessage(message1, lexOrigin);
 }
