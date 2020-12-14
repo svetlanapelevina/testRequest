@@ -19,4 +19,4 @@ const modifyText = (event) => {
 //    alert(event.lexOrigin);	
 }
 
-winsow.addEventListener("message", modifyText('xtnsh'));
+window.addEventListener("message", modifyText('xtnsh'));
