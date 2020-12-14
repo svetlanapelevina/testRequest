@@ -14,7 +14,7 @@ const getData = () => {
 }
 
 function modifyText(message) {
-	alert('received ' + message);
+	alert('received ' + message.data);
 	lexOrigin = message.data;
 }
 
