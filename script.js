@@ -23,6 +23,5 @@ window.addEventListener("message", modifyText.bind(this));
 
 window.addEventListener('load', (event) => {
 	console.log('onload');
-  	parent.postMessage('hello', 'https://svetlanapelevina.github.io/testRequest/');
-	parent.postMessage('hello', 'https://vslightningtest-dev-ed.lightning.force.com/lightning/n/VeriShowAgent__Appointments');
+  	parent.postMessage('hello', 'https://svetlanapelevina.github.io');
 });
