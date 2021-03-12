@@ -1,22 +1,22 @@
-let lexOrigin;
+// let lexOrigin;
 
-const send = () => {
-	parent.postMessage('hello', '*');
-}
+// const send = () => {
+// 	parent.postMessage('hello', '*');
+// }
 
-const getData = () => {
-	fetch('https://reqres.in/api/users?page=2').then(response => {
-		console.log(response);
-		alert(response);
-	});	
-}
+// const getData = () => {
+// 	fetch('https://reqres.in/api/users?page=2').then(response => {
+// 		console.log(response);
+// 		alert(response);
+// 	});	
+// }
 
-function modifyText(event) {
+function handleMessage(event) {
 	alert('received ' + event.data);
 	lexOrigin = event.data;
 }
 
-window.addEventListener("message", modifyText.bind(this));
+window.addEventListener("message", handleMessage.bind(this));
 
 
 window.addEventListener('unload', (event) => {
