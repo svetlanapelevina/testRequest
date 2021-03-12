@@ -13,8 +13,11 @@ const getData = () => {
 }
 
 function modifyText(message) {
+	if (~event.origin.indexOf(lexOrigin)) { 
 	alert('received ' + message.data);
+	} else {
 	lexOrigin = message.data;
+	}
 }
 
 window.addEventListener("message", modifyText.bind(this));
