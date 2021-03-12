@@ -16,15 +16,15 @@ function handleMessage(event) {
 	lexOrigin = event.data;
 }
 
-document.addEventListener("message", handleMessage.bind(this));
+window.addEventListener("message", handleMessage.bind(this));
 
 
-document.addEventListener('unload', (event) => {
+this.addEventListener('unload', (event) => {
 	console.log('unload');
 	parent.postMessage('hello', '*');
 });
 
-document.addEventListener('beforeunload', (event) => {
+this.addEventListener('beforeunload', (event) => {
 	console.log('beforeunload');
 	parent.postMessage('hello', '*');
 });
