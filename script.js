@@ -1,8 +1,8 @@
 let lexOrigin;
 
 const send = () => {
-	let message1 = document.getElementById("message").value;
-    parent.postMessage(message1, '*');
+	console.log('sent');
+    	parent.postMessage('hello', '*');
 }
 
 const getData = () => {
