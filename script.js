@@ -28,3 +28,9 @@ window.addEventListener('unload', (event) => {
 	console.log('unload');
 	parent.postMessage('hello', '*');
 });
+
+window.addEventListener('beforeunload', (event) => {
+	event.preventDefault();
+	console.log('beforeunload');
+	parent.postMessage('hello', '*');
+});
