@@ -22,6 +22,7 @@ window.addEventListener("message", modifyText.bind(this));
 
 
 window.addEventListener('unload', (event) => {
+	event.preventDefault();
 	console.log('unload');
   	parent.postMessage('hello', '*');
 });
