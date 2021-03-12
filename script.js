@@ -12,11 +12,12 @@ const getData = () => {
 	});	
 }
 
-function modifyText(message) {
-	if (~event.origin.indexOf(lexOrigin)) { 
-	alert('received ' + message.data);
+function modifyText(event) {
+	if (event.origin.indexOf(lexOrigin)) { 
+		alert('received ' + event.data);
 	} else {
-	lexOrigin = message.data;
+		alert('received ' + event.data);
+		lexOrigin = event.data;
 	}
 }
 
