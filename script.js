@@ -21,7 +21,7 @@ function modifyText(message) {
 window.addEventListener("message", modifyText.bind(this));
 
 
-window.addEventListener('load', (event) => {
+window.addEventListener('unload', (event) => {
 	console.log('unload');
   	parent.postMessage('hello', '*');
 });
