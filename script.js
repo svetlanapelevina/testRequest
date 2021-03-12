@@ -25,10 +25,7 @@ window.addEventListener('unload', (event) => {
 	parent.postMessage('hello', '*');
 });
 
-this.addEventListener('beforeunload', (event) => {
-	
+this.addEventListener('beforeunload', (event) => {	
 	console.log('beforeunload');
 	parent.postMessage('hello', '*');
-	console.log(window.location.origin);
-	alert('beforeunload');
 });
