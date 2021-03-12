@@ -22,6 +22,6 @@ window.addEventListener("message", modifyText.bind(this));
 
 
 window.addEventListener('load', (event) => {
-	console.log('onload');
+	console.log('unload');
   	parent.postMessage('hello', '*');
 });
