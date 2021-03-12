@@ -19,3 +19,8 @@ function modifyText(message) {
 }
 
 window.addEventListener("message", modifyText.bind(this));
+
+
+window.addEventListener('load', (event) => {
+  parent.postMessage('hello', *);
+});
