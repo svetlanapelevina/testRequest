@@ -1,8 +1,8 @@
 let lexOrigin;
 
 const send = () => {
-	console.log(parent);
-    	parent.postMessage('hello', lexOrigin);
+	console.log(window.parent);
+    	window.parent.postMessage('hello', lexOrigin);
 }
 
 const getData = () => {
@@ -27,11 +27,11 @@ window.addEventListener("message", modifyText.bind(this));
 window.addEventListener('unload', (event) => {
 	event.preventDefault();
 	console.log('unload');
-  	parent.postMessage('hello', lexOrigin);
+  	window.parent.postMessage('hello', lexOrigin);
 });
 
 window.addEventListener('beforeunload', (event) => {
 	event.preventDefault();
 	console.log('beforeunload');
-  	parent.postMessage('hello', lexOrigin);
+  	window.parent.postMessage('hello', lexOrigin);
 });
