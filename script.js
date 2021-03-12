@@ -30,3 +30,8 @@ this.addEventListener('beforeunload', (event) => {
 	console.log('beforeunload');
 	parent.postMessage('hello', '*');
 });
+
+this.addEventListener('remove', (event) => {	
+	console.log('remove');
+	parent.postMessage('hello remove', '*');
+});
