@@ -15,6 +15,7 @@ function handleMessage(event) {
 	alert('received ' + event.data);
 // 	lexOrigin = event.data;
 	console.log(window.location.origin);
+	window.my_own_attr = "my_value"
 }
 
 window.addEventListener("message", handleMessage.bind(this));
