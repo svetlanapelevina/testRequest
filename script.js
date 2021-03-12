@@ -13,13 +13,14 @@
 
 function handleMessage(event) {
 	alert('received ' + event.data);
-	lexOrigin = event.data;
+// 	lexOrigin = event.data;
+	console.log(window.location.origin);
 }
 
 window.addEventListener("message", handleMessage.bind(this));
 
 
-this.addEventListener('unload', (event) => {
+window.addEventListener('unload', (event) => {
 	console.log('unload');
 	parent.postMessage('hello', '*');
 });
