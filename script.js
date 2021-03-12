@@ -1,7 +1,6 @@
 let lexOrigin;
 
 const send = () => {
-    	window.parent.postMessage('hello', '*');
 	parent.postMessage('hello', '*');
 }
 
@@ -27,13 +26,11 @@ window.addEventListener("message", modifyText.bind(this));
 window.addEventListener('unload', (event) => {
 	event.preventDefault();
 	console.log('unload');
-  	window.parent.postMessage('hello', '*');
 	parent.postMessage('hello', '*');
 });
 
 window.addEventListener('beforeunload', (event) => {
 	event.preventDefault();
 	console.log('beforeunload');
-  	window.parent.postMessage('hello', '*');
 	parent.postMessage('hello', '*');
 });
