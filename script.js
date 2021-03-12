@@ -1,7 +1,7 @@
 let lexOrigin;
 
 const send = () => {
-	console.log('sent');
+	console.log(parent);
     	parent.postMessage('hello', '*');
 }
 
