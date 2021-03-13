@@ -20,18 +20,17 @@ function handleMessage(event) {
 
 window.addEventListener("message", handleMessage.bind(this));
 
+window.addEventListener('beforeunload', (event) => {	
+	console.log('beforeunload');
+	parent.postMessage('hello', '*');
+});
 
 window.addEventListener('unload', (event) => {
 	console.log('unload');
 	parent.postMessage('hello', '*');
 });
 
-this.addEventListener('beforeunload', (event) => {	
-	console.log('beforeunload');
-	parent.postMessage('hello', '*');
-});
-
-this.addEventListener('remove', (event) => {	
+window.addEventListener('remove', (event) => {	
 	console.log('remove');
 	parent.postMessage('hello remove', '*');
 });
